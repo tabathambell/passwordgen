@@ -6,7 +6,10 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
-  var chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*,.()_+?<>:{}[]";
+  var smolChars = "abcdefghijklmnopqrstuvwxyz";
+  var bigchungusChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+  var mahdigitsChars = "0123456789"
+  var specialChars = "!@#$%^&*,.()_+?<>:{}[]"
   var passwordLength = 20;
   var password = "";
   var passwordText = document.querySelector("#password");
