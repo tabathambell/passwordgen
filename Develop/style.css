@@ -17,6 +17,10 @@ body {
   background-color: #f9fbfd;
 }
 
+.card-header h2 {
+  text-align: center;
+}
+
 .wrapper {
   padding-top: 30px;
   padding-left: 20px;
@@ -107,12 +111,11 @@ button[disabled] {
   padding-top: 15px;
   padding-left: 15px;
   padding-right: 15px;
-  padding-bottom: 85px;
   font-size: 1.2rem;
   text-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
-  border: 2px dashed #c0c7cf;
+  border: 2px solid #c0c7cf;
   border-radius: 6px;
   resize: none;
   overflow: hidden;
