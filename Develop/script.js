@@ -97,7 +97,9 @@ function writePassword() {
     console.log("Bad password? " + badPassword);
 }
 
-    document.getElementById("password").value = password
+var passwordText = document.querySelector("#password");
+passwordText.value = password;
+
 };
 
 // Add event listener to generate button
