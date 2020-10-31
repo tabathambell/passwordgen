@@ -31,11 +31,24 @@ function writePassword() {
   var password = "";
   var passwordText = document.querySelector("#password");
 
+  var chars = "";
+  if (confirmSmol) {
+    chars += smolChars;
+  }
+
+  if (confirmBigchungus) {
+    chars += bigchungusChars;
+  }
+
+  if (confirmMahdigits) {
+    chars += mahdigitsChars;
+  }
+
+  if (confirmSpecial) {
+    chars += specialChars;
+  }
+
   for (var i = 0; i < passwordLength; i++) {
-    var chars = "";
-    if (confirmSmol) {
-      chars += smolChars;
-    }
 
     var randomNumber = Math.floor(Math.random() * chars.length);
     password += chars.substring(randomNumber,randomNumber+1);
