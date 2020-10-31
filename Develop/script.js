@@ -48,11 +48,42 @@ function writePassword() {
     chars += specialChars;
   }
 
-  for (var i = 0; i < passwordLength; i++) {
+  while (badPassword) {
+    var hasSmol = false;
+    var hasBigchungus = false;
+    var hasMahdigits = false;
+    var hasSpecial = false;
+    var badPassword = false;
+    password = "";
 
+  for (var i = 0; i < passwordLength; i++) {
     var randomNumber = Math.floor(Math.random() * chars.length);
     password += chars.substring(randomNumber,randomNumber+1);
+  }  
+
+  for (var j = 0; j < password.length; j++) {
+    var character = pasword.substring(j, j + 1);
+    if (smolChars.includes(character)) {
+      hasSmol = true;
+    }
+    if (bigchungusChars.includes(character)) {
+      hasBigchungus = true;
+    }
+    if (mahdigitsChars.includes(character)) {
+      hasMahdigits = true;
+    }
+    if (specialChars.includes(character)) {
+      hasSpecial = true;
+    }
   }
+
+  badPassword =
+    (confirmSmol && !hasSmol) ||
+    (confirmBigchungus && !hasBigchungus) ||
+    (confirmMahdigits && !hasMahdigits) ||
+    (confirmSpecial && !hasSpecial);
+}
+
     document.getElementById("password").value = password
 };
 
