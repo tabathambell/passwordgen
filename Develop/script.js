@@ -61,7 +61,7 @@ function writePassword() {
   }  
 
   for (var j = 0; j < password.length; j++) {
-    var character = pasword.substring(j, j + 1);
+    var character = password.substring(j, j + 1);
     if (smolChars.includes(character)) {
       hasSmol = true;
     }
